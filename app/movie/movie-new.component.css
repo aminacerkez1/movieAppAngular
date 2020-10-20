@@ -1,0 +1,19 @@
+button{
+margin-left: 20px;
+margin-right: 20px;
+background-color:#de1e1e;
+}
+h3{
+    color:#de1e1e;
+    font-family: "Poppins";
+}
+
+.material-icons left{
+   background-color:#de1e1e;
+
+}
+
+
+.btn, .btn-large {
+    background-color:#de1e1e;
+}

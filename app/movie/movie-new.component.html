@@ -1,0 +1,44 @@
+<div class="container">
+  <h3>Create new movie</h3>
+  <form #form="ngForm" class="col s12" novalidate>
+    <div class="row">
+      <div class="input-field col s6 m6">
+        <input type="text" class="form-control validate" #name id="name">
+        <label class="active" for="name">Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6 m6">
+        <input type="text" class="form-control validate" #releaseYear id="releaseYear">
+        <label class="active" for="releaseYear">Release Year</label>
+      </div>
+    </div>
+      <div class="row">
+        <div class="input-field col s6 m6">
+          <input type="text" class="form-control validate" #description id="description">
+          <label class="active" for="description">Description</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6 m6">
+          <input type="text" class="form-control validate" #director id="director">
+          <label class="active" for="director">Director</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card-panel teal lighten-2 col s6 m6 l6" *ngIf="movieCreated">{{info}}</div>
+        <button class="btn waves-effect waves-light right" type="submit" name="action"
+          (click)="newMovie(name.value, releaseYear.value,description.value,director.value)">Create Movie
+          <i class="material-icons right">send</i>
+        </button>
+       
+        <a md-button class="btn right waves-effect waves-light" (click)="goBack()"><i
+            class="material-icons left">keyboard_return</i>Back</a>
+      </div>
+  </form>
+</div>
+
+
+<!--This div is used to display toastr message-->
+<div id="toast-container" style="top: auto !important; left: auto !important; bottom: 10%; right:5%;"></div>

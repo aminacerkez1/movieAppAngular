@@ -1,0 +1,37 @@
+  <div>
+    <div class="input-field inline">
+      <input #filterString id="filter" type="text" class="validate" (input)="filterMovies(filterString.value)">
+      <label class="filterLabel" for="filter" >Filter by movie name </label>
+    </div>
+  </div>
+  
+  <table class="striped highlight centered responsive-table z-depth-2" style="font-size: 20px;">
+    <thead>
+      <tr>
+          <th data-field="firstName">Name</th>
+          <th data-field="lastName">Release Year</th>
+          <th data-field="birthDate">Director</th>
+          <th data-field="jobPosition">Description</th>
+          <th >Delete</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let movie of movies ">
+        <td contenteditable='true'>{{movie.Name}}</td>
+        <td>{{movie.ReleaseYear}}</td>
+        <td>{{movie.Director}}</td>
+        <td>{{movie.Description}}</td>
+        <td><a (click)="removeMovie(movie); $event.stopPropagation()"><i class="small material-icons center red-text">delete</i></a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="fixed-action-btn">
+      <a [routerLink]="['/movie-new']"   class="btn-floating btn-large blue waves-effect waves-light " >
+        <i class="large material-icons">add</i>
+      </a>
+  </div>
+  
+  <div id="toast-container" style="top: auto !important; left: auto !important; bottom: 10%; right:5%;"></div>
+  

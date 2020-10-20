@@ -1,0 +1,13 @@
+.input-field.inline input, .input-field.inline .select-dropdown {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    margin-right: 5rem;
+}
+.filterLabel{
+    font-size: 13px;
+}
+
+.btn-floating i {
+    background-color: #de1e1e;;
+}
+
